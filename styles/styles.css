@@ -1,0 +1,145 @@
+* {
+	margin: 3px;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Arial, sans-serif;
+	background-color: #ECF0F1;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  form {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 400px;
+	width: 100%;
+  }
+  
+  h3 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+  }
+  
+  hr {
+	margin-bottom: 20px;
+	border: none;
+	height: 1px;
+	background-color: #ddd;
+  }
+  .form-divide{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  .form-divide > div {
+	flex: 0 0 48%; 
+	margin-bottom: 15px;
+}
+  label {
+	display: block;
+	margin-bottom: 5px;
+	color: #333;
+	font-weight: bold;
+  }
+  
+  .input-group {
+	margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+	border-color: #3498db;
+	outline: none;
+  }
+  
+  button {
+	width: 100%;
+	padding: 10px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  button:hover {
+	background-color: #2980b9;
+  }
+  
+  p {
+	text-align: center;
+	margin-top: 15px;
+	font-size: 14px;
+  }
+  
+  a {
+	color: #3498db;
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+	form {
+	  padding: 15px;
+	  max-width: 90%;
+	}
+  
+	button {
+	  padding: 12px;
+	  font-size: 15px;
+	}
+  
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+	  padding: 12px;
+	  font-size: 15px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	h3 {
+	  font-size: 20px;
+	}
+  
+	label {
+	  font-size: 14px;
+	}
+  
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+	  font-size: 13px;
+	  padding: 10px;
+	}
+  
+	button {
+	  font-size: 14px;
+	  padding: 10px;
+    }
+  }

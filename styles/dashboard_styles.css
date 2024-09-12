@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ecf0f1;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.filter-bar {
+  display: flex;
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-bar label {
+  margin-right: 10px;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+.sidebar {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar h2 {
+  margin-right: 40px;
+  font-size: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-left: 20px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #2980b9;
+  border-radius: 4px;
+}
+.patients {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.patients h2 {
+  margin-bottom: 20px;
+}
+button {
+  width: 30%;
+  margin-right: 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #2980b9;
+  color: white;
+}
+
+table td {
+  background-color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  .data-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary-item {
+    margin-bottom: 15px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .filter-bar label,
+  .filter-bar input,
+  .filter-bar select {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-right {
+    margin-top: 15px;
+  }
+
+  .patients table,
+  .patients th,
+  .patients td {
+    font-size: 12px;
+  }
+
+  .analytics,
+  .appointments,
+  .notes {
+    padding: 15px;
+  }
+
+  .appointments ul li {
+    font-size: 14px;
+  }
+
+  .notes textarea {
+    font-size: 12px;
+  }
+}

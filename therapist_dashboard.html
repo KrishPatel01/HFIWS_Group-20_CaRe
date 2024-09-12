@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapist Dashboard</title>
+  <link rel="stylesheet" href="styles/dashboard_styles.css">
+</head>
+<body>
+
+  <div class="main-content">
+    <header>
+		<nav class="sidebar">
+			<h2>Therapist Dashboard</h2>
+			<ul>
+			  <li><a href="#">Home</a></li>
+			  <li><a href="#">Patients</a></li>
+			  <li><a href="#">Appointments</a></li>
+			  <li><a href="#">Settings</a></li>
+			</ul>
+		  </nav>
+      <div class="header-left">
+        <h1>Welcome, Dr. Kate</h1>
+      </div>
+    </header>
+
+
+    <div class="filter-bar">
+
+      <label for="patient-search">Search Patient:</label>
+      <input type="text" id="patient-search" placeholder="Enter patient name">
+    </div>
+
+    <section class="patients">
+      <h2>Today's Appointments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sr no</th>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Risk level</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>ABC</td>
+            <td>40</td>
+            <td>M</td>
+            <td>Moderate</td>
+            <td><button>Edit</button><button>View</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>XYZ</td>
+            <td>35</td>
+            <td>F</td>
+            <td>Low</td>
+            <td><button>Edit</button><button>View</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>PQR</td>
+            <td>40</td>
+            <td>M</td>
+            <td>Moderate</td>
+            <td><button>Edit</button><button>View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+</body>
+</html>
