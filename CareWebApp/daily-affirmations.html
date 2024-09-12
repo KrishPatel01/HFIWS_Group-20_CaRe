@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Affirmation - Wellness App</title>
+    <link rel="stylesheet" href="styles/daily-affirmations.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="patients.html">Dashboard</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Affirmations</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Daily Affirmation Log Form -->
+    <main class="affirmation-log-form">
+        <h1>Log Your Daily Affirmation</h1>
+
+        <!-- Date Selector -->
+        <label for="affirmation-date">Date:</label>
+        <input type="date" id="affirmation-date">
+
+        <!-- Affirmation Type -->
+        <label for="affirmation-type">Select or Write Your Affirmation:</label>
+        <select id="affirmation-type">
+            <option value="I am worthy of love and happiness">I am worthy of love and happiness</option>
+            <option value="I am strong and capable of achieving my goals">I am strong and capable of achieving my goals</option>
+            <option value="I choose to focus on the good in life">I choose to focus on the good in life</option>
+            <option value="custom">Write your own...</option>
+        </select>
+
+        <!-- Custom Affirmation (hidden unless custom is selected) -->
+        <label for="custom-affirmation" class="hidden">Your Custom Affirmation:</label>
+        <input type="text" id="custom-affirmation" class="hidden" placeholder="Write your own affirmation here...">
+
+        <!-- Personal Reflection -->
+        <label for="personal-reflection">Personal Reflection:</label>
+        <textarea id="personal-reflection" rows="4" placeholder="How does this affirmation resonate with you?"></textarea>
+
+        <!-- Mood Before and After -->
+        <label for="mood-before">How did you feel before using this affirmation?</label>
+        <select id="mood-before">
+            <option value="stressed">Stressed 😟</option>
+            <option value="calm">Calm 😌</option>
+            <option value="anxious">Anxious 😰</option>
+            <option value="happy">Happy 😊</option>
+        </select>
+
+        <label for="mood-after">How did you feel after using this affirmation?</label>
+        <select id="mood-after">
+            <option value="stressed">Stressed 😟</option>
+            <option value="calm">Calm 😌</option>
+            <option value="anxious">Anxious 😰</option>
+            <option value="happy">Happy 😊</option>
+        </select>
+
+        <!-- Affirmation Source (Optional) -->
+        <label for="affirmation-source">Affirmation Source (Optional):</label>
+        <input type="text" id="affirmation-source" placeholder="Where did this affirmation come from?">
+
+        <!-- Reminder (Optional) -->
+        <label for="affirmation-reminder">Set Reminder to Repeat Affirmation (Optional):</label>
+        <input type="time" id="affirmation-reminder">
+
+        <!-- File Upload for Media -->
+        <label for="file-upload">Upload related media or documents (Optional):</label>
+        <input type="file" id="file-upload" accept=".jpg,.jpeg,.png,.pdf,.mp3,.mp4,.docx">
+
+        <!-- Share with Therapist Option -->
+        <div class="privacy-settings">
+            <label for="share">Share this affirmation log with your therapist?</label>
+            <input type="checkbox" id="share" checked> Yes
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Save Affirmation Log</button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/daily-affirmations.js"></script>
+</body>
+</html>

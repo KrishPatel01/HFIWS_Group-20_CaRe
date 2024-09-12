@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - Wellness App</title>
+    <link rel="stylesheet" href="styles/patients.css">
+    <!-- Include Chart.js library for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patients.html">Dashboard</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Affirmations</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main>
+        <div class="dashboard-container">
+
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <h1>Welcome back, Magaret!</h1>
+                <p>Here's a summary of your recent activities and progress.</p>
+            </section>
+
+            <section class="icon-navigation">
+                <div class="icon-card">
+                    <img src="image.png" alt="Overall Icon">
+                    <p>Overall</p>
+                </div>
+                <div class="icon-card" id="add-activity">
+                    <img src="image (1).png" alt="Add Activity Icon">
+                    <p><a href="add-activity.html">Add Activity</a></p>
+                </div>
+                <div class="icon-card">
+                    <img src="image (2).png" alt="Goals Icon">
+                    <p><a href="goals.html">Your Goals</a></p>
+                </div>
+            </section>           
+
+            <!-- Activity Summary Section -->
+            <section class="activity-summary">
+                <h2>Activity Summary (Last 7 Days)</h2>
+                <div class="activity-cards">
+                    <div class="card">
+                        <h3>Journal Entries</h3>
+                        <p>You made 4 entries this week.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sleep Patterns</h3>
+                        <p>Average Sleep: 7 hours</p>
+                    </div>
+                    <div class="card">
+                        <h3>Exercise</h3>
+                        <p>3 workouts completed</p>
+                    </div>
+                    <div class="card">
+                        <h3>Daily Affirmations</h3>
+                        <p>Selected 5 affirmations</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weekly Goals Section -->
+            <section class="weekly-goals">
+                <h2>Your Goals for This Week</h2>
+                <ul>
+                    <li>Sleep at least 7 hours per night - <strong>On track</strong></li>
+                    <li>Make 5 journal entries - <strong>3/5 entries made</strong></li>
+                    <li>Exercise at least 4 times - <strong>2/4 completed</strong></li>
+                </ul>
+            </section>
+
+            <!-- Charts/Visualization Section -->
+            <section class="charts">
+                <h2>Your Progress</h2>
+                <canvas id="moodChart"></canvas>
+                <canvas id="sleepChart"></canvas>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Handle Chart.js -->
+    <script src="js/patients.js"></script>
+
+</body>
+</html>

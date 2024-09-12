@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #00308F;
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Goals and Previous Week Section */
+.goals-week-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.goals-week-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Current Goals Section */
+.current-goals ul, .previous-week-summary ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.current-goals ul li, .previous-week-summary ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Set or Update Goals Form */
+.set-goals form {
+    display: flex;
+    flex-direction: column;
+}
+
+.set-goals label {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.set-goals input, .set-goals select {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.set-goals button.submit-btn {
+    background-color: #00308F;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.set-goals button.submit-btn:hover {
+    background-color: #4CAF50;
+}
+
+/* Mood Overview Section */
+.mood-overview {
+    margin-top: 30px;
+}
+
+/* Notes for Next Week Section */
+.notes-next-week textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+/* File Upload Section */
+.media-upload label, .media-upload input {
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.media-upload input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Share with Therapist Section */
+.share-with-therapist {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.share-with-therapist label {
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #00308F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

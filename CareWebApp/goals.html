@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals & Previous Week - Wellness App</title>
+    <link rel="stylesheet" href="styles/goals.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="patients.html">Dashboard</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Affirmations</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Goals and Previous Week Section -->
+    <main class="goals-week-container">
+        <h1>Your Goals</h1>
+
+        <!-- Current Goals Overview -->
+        <section class="current-goals">
+            <h2>Current Week Goals</h2>
+            <ul>
+                <li>Exercise 4 times this week - <strong>2/4 sessions completed</strong></li>
+                <li>Write 5 journal entries - <strong>3/5 entries completed</strong></li>
+                <li>Sleep at least 7 hours each night - <strong>On track</strong></li>
+            </ul>
+        </section>
+
+        <!-- Set or Update Goals Form -->
+        <section class="set-goals">
+            <h2>Set or Update Your Goals</h2>
+            <form>
+                <label for="goal-type">Type of Goal:</label>
+                <select id="goal-type">
+                    <option value="physical">Physical Health</option>
+                    <option value="mental">Mental Health</option>
+                    <option value="journaling">Journaling</option>
+                    <option value="sleep">Sleep</option>
+                </select>
+
+                <label for="goal-description">Goal Description:</label>
+                <input type="text" id="goal-description" placeholder="e.g. Exercise 4 times this week">
+
+                <label for="goal-progress">Track Progress (Optional):</label>
+                <input type="number" id="goal-progress" min="0" placeholder="e.g. 0/4 completed">
+
+                <label for="goal-deadline">Set Deadline:</label>
+                <input type="date" id="goal-deadline">
+
+                <button type="submit" class="submit-btn">Save Goal</button>
+            </form>
+        </section>
+
+        <!-- Previous Week Summary -->
+        <section class="previous-week-summary">
+            <h2>Previous Week Summary</h2>
+            <ul>
+                <li>Journaling: 4/5 entries completed</li>
+                <li>Exercise: 3/4 sessions completed</li>
+                <li>Average Sleep: 6.5 hours per night</li>
+                <li>Affirmations: 5 affirmations selected</li>
+            </ul>
+        </section>
+
+        <!-- Mood Overview -->
+        <section class="mood-overview">
+            <h2>Mood Overview for Last Week</h2>
+            <p>Mood chart or tracker would go here (e.g., line graph, bar chart)</p>
+        </section>
+
+        <!-- Add Notes for Next Week -->
+        <section class="notes-next-week">
+            <h2>Notes for Next Week</h2>
+            <textarea id="next-week-notes" rows="4" placeholder="Write down any thoughts for the next week..."></textarea>
+        </section>
+
+        <!-- File Upload for Media -->
+        <section class="media-upload">
+            <h2>Upload Media (Optional)</h2>
+            <label for="file-upload">Upload workout progress, meal logs, or other files:</label>
+            <input type="file" id="file-upload" accept=".jpg,.jpeg,.png,.pdf,.mp4,.docx">
+        </section>
+
+        <!-- Share with Therapist Option -->
+        <section class="share-with-therapist">
+            <h2>Share with Therapist</h2>
+            <label for="share">Share this progress with your therapist?</label>
+            <input type="checkbox" id="share" checked> Yes
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/goals.js"></script>
+</body>
+</html>

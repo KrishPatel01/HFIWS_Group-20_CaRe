@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00308F; 
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Dashboard Section */
+main {
+    padding: 40px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome Section */
+.welcome h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+/* Navigation Icon Section */
+.icon-navigation {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    margin: 40px 0;
+    text-align: center;
+}
+
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; 
+}
+
+.icon-card img {
+    height: 100px; 
+    margin-bottom: 10px;
+}
+
+.icon-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00308F; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Activity Summary */
+.activity-summary {
+    margin-top: 40px;
+}
+
+.activity-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.activity-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.card h3 {
+    color: #4CAF50; /* Green */
+    margin-bottom: 10px;
+}
+
+/* Weekly Goals */
+.weekly-goals {
+    margin-top: 40px;
+}
+
+.weekly-goals ul {
+    list-style: none;
+    padding: 0;
+}
+
+.weekly-goals ul li {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Charts Section */
+.charts {
+    margin-top: 40px;
+}
+
+canvas {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: 300px;
+}
+
+/* Footer */
+footer {
+    background-color: #00308F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

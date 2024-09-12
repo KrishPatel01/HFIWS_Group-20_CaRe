@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Log - Wellness App</title>
+    <link rel="stylesheet" href="styles/exercise.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="patients.html">Dashboard</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Affirmations</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Exercise Log Form -->
+    <main class="exercise-log-form">
+        <h1>Log Your Exercise</h1>
+
+        <!-- Date Selector -->
+        <label for="exercise-date">Date of Exercise:</label>
+        <input type="date" id="exercise-date">
+
+        <!-- Exercise Type -->
+        <label for="exercise-type">Exercise Type:</label>
+        <input type="text" id="exercise-type" placeholder="e.g. Running, Yoga, Weightlifting">
+
+        <!-- Duration -->
+        <label for="exercise-duration">Duration (in minutes):</label>
+        <input type="number" id="exercise-duration" min="0" placeholder="e.g. 45 minutes">
+
+        <!-- Intensity Selector -->
+        <label for="exercise-intensity">Intensity:</label>
+        <select id="exercise-intensity">
+            <option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High</option>
+        </select>
+
+        <!-- Calories Burned (Optional) -->
+        <label for="calories-burned">Calories Burned (Optional):</label>
+        <input type="number" id="calories-burned" min="0" placeholder="e.g. 350 calories">
+
+        <!-- Mood or Energy Level -->
+        <label for="exercise-mood">How did you feel during/after the workout?</label>
+        <select id="exercise-mood">
+            <option value="energized">Energized 😄</option>
+            <option value="tired">Tired 😴</option>
+            <option value="happy">Happy 😊</option>
+            <option value="stressed">Stressed 😟</option>
+        </select>
+
+        <!-- Goals for the Session (Optional) -->
+        <label for="exercise-goals">Goals for the Session (Optional):</label>
+        <textarea id="exercise-goals" rows="2" placeholder="Describe your workout goals"></textarea>
+
+        <!-- Notes (Optional) -->
+        <label for="exercise-notes">Additional Notes (Optional):</label>
+        <textarea id="exercise-notes" rows="4" placeholder="Any challenges, thoughts, or observations?"></textarea>
+
+        <!-- File Upload for Media -->
+        <label for="file-upload">Upload any workout photos or documents (Optional):</label>
+        <input type="file" id="file-upload" accept=".jpg,.jpeg,.png,.pdf,.mp4,.docx">
+
+        <!-- Share with Therapist Option -->
+        <div class="privacy-settings">
+            <label for="share">Share this log with your therapist?</label>
+            <input type="checkbox" id="share" checked> Yes
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Save Exercise Log</button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/exercise.js"></script>
+</body>
+</html>

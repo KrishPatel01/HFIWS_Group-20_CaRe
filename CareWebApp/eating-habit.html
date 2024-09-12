@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eating Habits - Wellness App</title>
+    <link rel="stylesheet" href="styles/eating-habit.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="patients.html">Dashboard</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Affirmations</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Eating Habits Log Form -->
+    <main class="eating-habits-form">
+        <h1>Log Your Eating Habits</h1>
+
+        <!-- Date Selector -->
+        <label for="eating-date">Date:</label>
+        <input type="date" id="eating-date">
+
+        <!-- Meal Type Selector -->
+        <label for="meal-type">Meal Type:</label>
+        <select id="meal-type">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+        </select>
+
+        <!-- Food and Drink Description -->
+        <label for="food-description">Food and Drink Description:</label>
+        <textarea id="food-description" rows="4" placeholder="Describe what you ate and drank..."></textarea>
+
+        <!-- Portion Size -->
+        <label for="portion-size">Portion Size:</label>
+        <select id="portion-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <!-- Water Intake -->
+        <label for="water-intake">Water Intake (cups):</label>
+        <input type="number" id="water-intake" min="0" placeholder="e.g. 8 cups">
+
+        <!-- Mood While Eating -->
+        <label for="eating-mood">Mood While Eating:</label>
+        <select id="eating-mood">
+            <option value="happy">Happy 😊</option>
+            <option value="stressed">Stressed 😟</option>
+            <option value="bored">Bored 😴</option>
+            <option value="satisfied">Satisfied 😌</option>
+        </select>
+
+        <!-- Cravings (Optional) -->
+        <label for="cravings">Cravings (Optional):</label>
+        <input type="text" id="cravings" placeholder="e.g. Craved chocolate">
+
+        <!-- Emotional Eating Notes (Optional) -->
+        <label for="emotional-eating">Notes on Emotional Eating (Optional):</label>
+        <textarea id="emotional-eating" rows="4" placeholder="Describe any emotional eating patterns..."></textarea>
+
+        <!-- File Upload for Media -->
+        <label for="file-upload">Upload any meal photos or documents (Optional):</label>
+        <input type="file" id="file-upload" accept=".jpg,.jpeg,.png,.pdf,.mp4,.docx">
+
+        <!-- Share with Therapist Option -->
+        <div class="privacy-settings">
+            <label for="share">Share this log with your therapist?</label>
+            <input type="checkbox" id="share" checked> Yes
+        </div>
+
+        <button type="submit" class="submit-btn">Save Eating Habits Log</button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/eating-habit.js"></script>
+</body>
+</html>
+

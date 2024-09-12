@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile - Wellness App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="therapist.html">Dashboard</a></li>
+                <li><a href="#">Patients</a></li>
+                <li><a href="#">Group Sessions</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Patient Profile Dashboard Container -->
+    <main class="profile-dashboard-container">
+        <h1>Patient Profile: John Doe</h1>
+
+        <!-- Overview of Patient's Progress -->
+        <section class="patient-summary">
+            <h2>Summary of Recent Activity</h2>
+            <p>John has been consistent with journaling but is struggling to meet his sleep goals.</p>
+
+            <div class="progress-summary">
+                <div class="progress-card">
+                    <h3>Journaling</h3>
+                    <p>Consistently journaling every day this week.</p>
+                    <progress value="80" max="100"></progress> 
+                </div>
+
+                <div class="progress-card">
+                    <h3>Sleep</h3>
+                    <p>Falling short of the 7-hour sleep goal most nights.</p>
+                    <progress value="50" max="100"></progress>
+                </div>
+
+                <div class="progress-card">
+                    <h3>Exercise</h3>
+                    <p>Achieved 3 out of 4 exercise sessions this week.</p>
+                    <progress value="75" max="100"></progress>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Logs Section -->
+        <section class="patient-logs">
+            <h2>Detailed Logs (Weekly / Monthly)</h2>
+
+            <div class="log-view">
+                <h3>Weekly Overview</h3>
+                <ul>
+                    <li>Monday: 6 hours of sleep, journaled, exercised.</li>
+                    <li>Tuesday: 5 hours of sleep, journaled, no exercise.</li>
+                    <li>Wednesday: 7 hours of sleep, journaled, exercised.</li>
+                    <!-- More logs... -->
+                </ul>
+            </div>
+
+            <div class="log-view">
+                <h3>Monthly Overview</h3>
+                <ul>
+                    <li>Week 1: Met exercise goals, sleep was below target.</li>
+                    <li>Week 2: Consistently journaled, struggled with sleep.</li>
+                    <!-- More logs... -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Progress Tracking Section -->
+        <section class="progress-tracking">
+            <h2>Goal Progress Tracking</h2>
+            <div class="goal-tracking-cards">
+                <div class="goal-card">
+                    <h3>Sleep Goal</h3>
+                    <p>Target: 7 hours of sleep each night</p>
+                    <p>Current Average: 5.8 hours/night</p>
+                </div>
+
+                <div class="goal-card">
+                    <h3>Exercise Goal</h3>
+                    <p>Target: Exercise 4 times a week</p>
+                    <p>Progress: 3 out of 4 sessions this week</p>
+                </div>
+
+                <div class="goal-card">
+                    <h3>Mental Health Goal</h3>
+                    <p>Target: Journal every day</p>
+                    <p>Progress: Journaling daily</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

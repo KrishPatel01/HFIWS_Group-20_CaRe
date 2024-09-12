@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00308F;
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Group Management Container */
+.group-management-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.group-management-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00308F;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00308F;
+}
+
+/* Create Group Section */
+.create-group {
+    margin-bottom: 40px;
+}
+
+.create-group form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-group label {
+    font-weight: bold;
+}
+
+.create-group input, .create-group textarea, .create-group select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.create-group textarea {
+    resize: none;
+}
+
+.create-group-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.create-group-btn:hover {
+    background-color: #45A049;
+}
+
+/* Assign Patients to Groups */
+.assign-patients {
+    margin-bottom: 40px;
+}
+
+.group-list {
+    display: flex;
+    gap: 20px;
+}
+
+.group-card {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.group-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.patient-group {
+    list-style: none;
+    padding-left: 0;
+}
+
+.patient-group li {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+/* Group Activity Section */
+.group-activity {
+    margin-bottom: 40px;
+}
+
+.activity-monitor {
+    display: flex;
+    gap: 20px;
+}
+
+.activity-card {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Badge Assignment Section */
+.assign-badges {
+    margin-bottom: 40px;
+}
+
+.badge-assignment {
+    display: flex;
+    gap: 20px;
+}
+
+.badge-card {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.assign-badge-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.assign-badge-btn:hover {
+    background-color: #45A049;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .group-list, .activity-monitor, .badge-assignment {
+        flex-direction: column;
+    }
+}

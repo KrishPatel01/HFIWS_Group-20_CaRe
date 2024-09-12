@@ -1,0 +1,149 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00308F; /* Navy blue */
+    color: white;
+  }
+  
+  header .logo img {
+    height: 60px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #F04A46; /* Red from logo */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  .cta-buttons {
+    margin-top: 30px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    color: #00308F; /* Navy blue */
+    border: 2px solid #00308F;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  /* Features Section */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .feature {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .feature h2 {
+    color: #00308F; /* Navy blue */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #00308F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  footer ul li a {
+    color: white;
+  }
+  

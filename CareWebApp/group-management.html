@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Therapy Management - Wellness App</title>
+    <link rel="stylesheet" href="styles/group-management.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="therapist.html">Dashboard</a></li>
+                <li><a href="#">Patients</a></li>
+                <li><a href="#">Group Sessions</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Group Management Container -->
+    <main class="group-management-container">
+        <h1>Group Therapy Management</h1>
+
+        <!-- Create New Group Section -->
+        <section class="create-group">
+            <h2>Create New Group</h2>
+            <form>
+                <label for="group-name">Group Name:</label>
+                <input type="text" id="group-name" placeholder="e.g., Mindfulness Group">
+                
+                <label for="group-description">Group Description:</label>
+                <textarea id="group-description" placeholder="Describe the group goals..."></textarea>
+
+                <label for="group-type">Select Group Type:</label>
+                <select id="group-type">
+                    <option value="mindfulness">Mindfulness</option>
+                    <option value="anxiety">Anxiety Support</option>
+                    <option value="depression">Depression Support</option>
+                    <option value="stress">Stress Management</option>
+                </select>
+
+                <button type="submit" class="create-group-btn">Create Group</button>
+            </form>
+        </section>
+
+        <!-- Assign Patients to Groups -->
+        <section class="assign-patients">
+            <h2>Assign Patients to Groups</h2>
+
+            <div class="group-list">
+                <!-- Group 1 -->
+                <div class="group-card">
+                    <h3>Mindfulness Group</h3>
+                    <ul id="group-1" class="patient-group">
+                        <li draggable="true">John Doe</li>
+                        <li draggable="true">Jane Smith</li>
+                    </ul>
+                </div>
+
+                <!-- Group 2 -->
+                <div class="group-card">
+                    <h3>Anxiety Support Group</h3>
+                    <ul id="group-2" class="patient-group">
+                        <li draggable="true">Michael Brown</li>
+                    </ul>
+                </div>
+
+                <!-- Unassigned Patients -->
+                <div class="group-card">
+                    <h3>Unassigned Patients</h3>
+                    <ul id="unassigned-patients" class="patient-group">
+                        <li draggable="true">Sarah Johnson</li>
+                        <li draggable="true">David Wilson</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Activity Monitoring -->
+        <section class="group-activity">
+            <h2>Monitor Group Progress</h2>
+            <div class="activity-monitor">
+                <div class="activity-card">
+                    <h3>Mindfulness Group</h3>
+                    <p>John Doe has completed 5 journaling sessions on mindfulness techniques.</p>
+                    <p>Jane Smith is on track with her sleep goals.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>Anxiety Support Group</h3>
+                    <p>Michael Brown is improving in managing stress through breathing exercises.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Badge Assignment Section -->
+        <section class="assign-badges">
+            <h2>Assign Badges</h2>
+            <div class="badge-assignment">
+                <div class="badge-card">
+                    <h3>Mindfulness Group</h3>
+                    <label for="badge-select-mindfulness">Select Badge:</label>
+                    <select id="badge-select-mindfulness">
+                        <option value="badge1">Mindfulness Master</option>
+                        <option value="badge2">Consistency Star</option>
+                    </select>
+                    <button class="assign-badge-btn">Assign Badge</button>
+                </div>
+
+                <div class="badge-card">
+                    <h3>Anxiety Support Group</h3>
+                    <label for="badge-select-anxiety">Select Badge:</label>
+                    <select id="badge-select-anxiety">
+                        <option value="badge1">Anxiety Champion</option>
+                        <option value="badge2">Stress Reliever</option>
+                    </select>
+                    <button class="assign-badge-btn">Assign Badge</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/group-management.js"></script>
+
+</body>
+</html>

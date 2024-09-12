@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00308F; /* Navy blue */
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Patient List Container */
+.patient-list-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.patient-list-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #00308F;
+    text-align: center;
+}
+
+/* Patients Grid */
+.patients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns layout */
+    gap: 20px;
+}
+
+.patient-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-underline {
+    text-decoration: none; 
+    color: white;  
+    
+}
+
+.patient-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.patient-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00308F;
+}
+
+.patient-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.view-profile-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.view-profile-btn:hover {
+    background-color: #45A049;
+}
+
+footer {
+    background-color: #00308F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  footer ul li a {
+    color: white;
+  }
+
+/* Hover Effect */
+.patient-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .patients-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .patients-grid {
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+    }
+}

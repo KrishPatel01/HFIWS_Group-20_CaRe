@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to CARE</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="careApp.svg" alt="Wellness App Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="patients.html">Dashboard</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Therapists</a></li>
+                <li><a href="loginPage.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Form Container -->
+    <div class="login-container">
+        <!-- Logo and Title -->
+        <h1>Login To <span class="care-logo">CARE</span></h1>
+        
+        <!-- Login Form -->
+        <form class="login-form">
+            <div class="input-group">
+                <i class="material-icons">account_circle</i>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <i class="material-icons">vpn_key</i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+        
+        <!-- Forgot Password -->
+        <div class="forgot-password">
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+    <script src="js/login.js"></script>
+</body>
+</html>
