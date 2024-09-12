@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #007bff;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user-greeting {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user-greeting span {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.navbar .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #0056b3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-logo{
+    margin-right: 10px;
+    border-radius: 7px;
+    width: 100px;
+}
+
+.navbar .icon-user{
+    font-size: x-large;
+}
+
+@media (max-width: 768px) {
+    .navbar-left a {
+        display: none;
+    }
+    
+    .nav-logo {
+        font-size: 20px;
+    }
+    
+    .user-greeting span {
+        display: none;
+    }
+    
+    .user-avatar {
+        margin-right: 10px;
+    }
+}

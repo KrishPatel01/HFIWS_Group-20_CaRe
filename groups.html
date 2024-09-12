@@ -6,6 +6,8 @@
     <title>Groups</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="groups.css">
+    <link rel="stylesheet" href="navbar.css">
+
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="groups.js"></script>
 
@@ -13,14 +15,22 @@
     
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Home <span>Group</span></h1>
-            <div class="user-info">
-                <p>Hi, John</p>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img class="nav-logo" src="logo.png">
+            <a href="#" class="nav-link">Home</a>
+            <a href="patientView.html" class="nav-link">patients</a>
+            <a href="#" class="nav-link">Observation</a>
+            <a href="#" class="nav-link active">Groups</a>
+        </div>
+        <div class="navbar-right">
+            <div class="user-greeting">
+                <span>Hi, John</span>
+                <i class="icon-user"></i>
             </div>
         </div>
-    </header>
+    </div>
+
 
     <div class="container">
         <div class="group-list">
@@ -30,7 +40,7 @@
                     <input type="text" placeholder="Search...">
                     <a href="#" class="search-link"><i class="icon-search"></i></a>
                 </div>
-                <a href="patientGroup1.html" class="group-link"><i class="icon-home"><p>Groups</p></i></a>
+                <a href="patientGroup1.html" class="group-link"><i class="icon-home"><p>Create</p></i></a>
             </div>
             <div class="group-list-items">
                 <div class="group-item" onclick="showGroup('Yoga')">

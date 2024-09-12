@@ -52,6 +52,7 @@ header {
 }
 .patient-list-top{
     display: flex;
+    margin-bottom: 20px;
 }
 
 #patientNames{
@@ -66,7 +67,6 @@ header {
 .search-bar input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #6a6a6a;
     border-radius: 5px;
 }

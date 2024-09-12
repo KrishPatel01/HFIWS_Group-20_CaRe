@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Assignment</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Home <span>Group</span></h1>
-            <div class="user-info">
-                <p>Hi, John</p>
-                <div class="user-avatar">
-                    <img src="avatar-icon.png" alt="User Avatar">
-                </div>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img class="nav-logo" src="logo.png">
+            <a href="#" class="nav-link">Home</a>
+            <a href="patientView.html" class="nav-link">patients</a>
+            <a href="#" class="nav-link">Observation</a>
+            <a href="#" class="nav-link active">Groups</a>
+        </div>
+        <div class="navbar-right">
+            <div class="user-greeting">
+                <span>Hi, John</span>
+                <i class="icon-user"></i>
             </div>
         </div>
-    </header>
+    </div>
 
     <div class="container">
         <div class="patient-list">
