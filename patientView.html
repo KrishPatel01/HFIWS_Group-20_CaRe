@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Dashboard</title>
+    <link rel="stylesheet" href="patientView.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script defer src="https://kit.fontawesome.com/a076d05399.js"></script> 
+    <script defer src="patientView.js"></script> External JS file
+</head>
+<body>
+    <div class="wrapper">
+        
+
+        <div class="content">
+            <header class="top-bar">
+                <h1>Patient Dashboard</h1>
+                <div class="user-greeting">
+                    <p>Welcome, Dr. Smith</p>
+                    <div class="user-avatar"></div>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <div class="patients-list">
+                    <h2>Your Patients</h2>
+                    <ul>
+                        <li onclick="showPatientDetails('Kate Watson')">Kate Watson</li>
+                        <li onclick="showPatientDetails('John Doe')">John Doe</li>
+                        <li onclick="showPatientDetails('Alice Green')">Alice Green</li>
+                    </ul>
+                </div>
+
+                <div class="patient-details" id="patient-details">
+                    <h2>Patient Details</h2>
+                    <div id="patient-info">
+                        <p>Select a patient to view details.</p>
+                    </div>
+                    <h3>Observation Notes</h3>
+                    <div id="observation-notes">
+                        <p>No notes available.</p>
+                    </div>
+                    <textarea id="new-note" class="observation-text" placeholder="quick add observation notes here..."></textarea>
+                    <button class="notes-btn" onclick="addObservationNote()">Add Note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

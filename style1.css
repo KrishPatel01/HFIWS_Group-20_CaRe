@@ -37,12 +37,12 @@ header {
     border-radius: 50%;
 }
 
-/* Container */
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     height: calc(100vh - 80px); 
+    background-color: #f0f0f0;
 }
 
 .patient-list {
