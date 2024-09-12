@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
@@ -20,11 +21,16 @@
     </header>
 
     <div class="container">
-        <!-- Left side (Patient list) -->
         <div class="patient-list">
+         <div class="patient-list-top">
+        
             <div class="search-bar">
                 <input type="text" placeholder="Search...">
+                <a href="#" class="search-link"><i class="fa fa-search"></i></a>
             </div>
+            <a href="groups.html" class="group-link"><i class="fa fa-home"><p>Groups</p></i></a>
+        </div>
+            
             <div id="patientNames" class="list">
                 <div class="patient-item" draggable="true" ondragstart="drag(event)" id="patient1">Steve Smith </div>
                 <div class="patient-item" draggable="true" ondragstart="drag(event)" id="patient2">Alex </div>
@@ -38,12 +44,9 @@
                 <div class="patient-item" draggable="true" ondragstart="drag(event)" id="patient10">Steven </div>
             </div>
         </div>
-
-        <!-- Right side (Group assignment) -->
         <div class="group-area">
             <div id="group-name">Group Name</div>
             <ul id="group" class="group-list" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <!-- Patients will be dropped here -->
             </ul>
             <button class="submit-btn">Submit</button>
         </div>

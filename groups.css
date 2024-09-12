@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.group-header {
+    color: #3333cc;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin-right: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.group-list, .group-details {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.group-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.group-list-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #5b67f0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #edf4ff;
+}
+
+.group-item:hover {
+    background-color: #e6e6e6;
+}
+
+.group-icon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.group-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-member {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.member-avatar {
+    width: 50px;
+    margin-right: 15px;
+}
+
+h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.icon-group{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    width: 80%;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #6a6a6a;
+    border-radius: 5px;
+}
+
+.icon-search{
+    margin: 0 10px;
+    font-size: x-large;
+}
+
+.icon-home{
+    margin-left: 10px;
+    font-size: x-large;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+}
+.icon-home p{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: large;
+}
+.group-link{
+    color: #5b67f0;
+    text-decoration: none;
+}
+
+.patient-list-top{
+    display: flex;
+}
+
+.group-member-details{
+    border: 1px solid orangered;
+    border-radius: 10px;
+}
+
+.group-head{
+    border-radius: 10px;
+    background-color: rgb(255, 118, 69);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#group-members{
+    padding:10px;
+}
+
+.search-link{
+text-decoration: none;
+}
