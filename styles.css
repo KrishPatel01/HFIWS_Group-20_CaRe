@@ -1,3 +1,4 @@
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -42,6 +43,7 @@ h1 {
     background-color: #ccc;
 }
 
+/* Search Bar */
 .search-container {
     margin-bottom: 20px;
 }
@@ -53,6 +55,7 @@ h1 {
     border-radius: 5px;
 }
 
+/* Patient List */
 .patient-list {
     display: flex;
     flex-wrap: wrap;
@@ -75,4 +78,60 @@ h1 {
 .patient-card span {
     font-size: 0.9em;
     color: grey;
+}
+
+/* Patient Detail Table */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.patient-info {
+    width: 70%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.patient-info th, .patient-info td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.patient-info th {
+    background-color: #f3ce73;
+    font-weight: bold;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 2px solid #3a3aee;
+    border-radius: 5px;
+    background-color: white;
+    color: #3a3aee;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3a3aee;
+    color: white;
+}
+
+.new-appointment {
+    margin-top: 10px;
+}
+
+.reschedule {
+    margin-top: 10px;
 }
