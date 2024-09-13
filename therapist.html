@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Dashboard - Wellness App</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="styles/therapist.css">
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img class="nav-logo" src="logo.png">
+            <a href="#" class="nav-link">Home</a>
+            <a href="patientView.html" class="nav-link">patients</a>
+            <a href="notes.html" class="nav-link">Observation</a>
+            <a href="groups.html" class="nav-link">Groups</a>
+        </div>
+        <div class="navbar-right">
+            <div class="user-greeting">
+                <span>Hi, John</span>
+                <i class="icon-user"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Therapist Dashboard Container -->
+    <main class="dashboard-container">
+        <h1>Welcome to Your Dashboard, Therapist</h1>
+
+        <!-- Dashboard Grid Sections -->
+        <div class="dashboard-grid">
+            <!-- Patient List Section -->
+            <div class="dashboard-card">
+                <img src="patientIcon.png" alt="Patient Icon">
+                <p><a href="patientView.html" class="no-underline">Patient List</a></p>
+            </div>
+            
+            <!-- Group-based Sessions Section -->
+            <div class="dashboard-card">
+                <img src="groupbased.png" alt="Group Icon">
+                <p><a href="groups.html" class="no-underline">Group-based session</a></p>
+            </div>
+            
+            <!-- Appointments Section -->
+            <div class="dashboard-card">
+                <img src="appointments.png" alt="Appointments Icon">
+                <p>Appointments</p>
+            </div>
+            
+            <!-- Patient Notes Section -->
+            <div class="dashboard-card">
+                <img src="patientsnotes.png" alt="Notes Icon">
+                <p><a href="notes.html" class="no-underline">Patient Notes</a></p>
+            </div>
+            
+            <!-- Calendar Section -->
+            <div class="dashboard-card">
+                <img src="calendar.png" alt="Calendar Icon">
+                <p>Calendar View</p>
+            </div>
+
+            <!-- Upcoming Events Section -->
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <div class="events-list">
+                    <ul>
+                        <li><a href="#">Group activity - 15:00 to 15:30</a></li>
+                        <li>Patient survey - 15:30 to 16:30</li>
+                        <li>Wendy Appoi. - 16:30 to 16:45</li>
+                        <li>Team meeting - 17:00 to 17:30</li>
+                        <li>Therapist conference - 18:00 to 19:00</li>
+                    </ul>
+                </div>
+            </div>   
+        </div>
+
+        <!-- Patient Progress Overview -->
+        <section class="progress-overview">
+            <h2>Patient Progress Overview</h2>
+            <ul>
+                <li>John Doe: Struggling with sleep goals</li>
+                <li>Jane Smith: Missed 2 journal entries this week</li>
+                <li>Michael Brown: Met exercise goal for this week</li>
+                <!-- More progress updates here -->
+            </ul>
+        </section>
+
+        <!-- Task Reminders Section -->
+        <section class="task-reminders">
+            <h2>Task Reminders</h2>
+            <ul>
+                <li><input type="checkbox"> Review John Doe's journal entry</li>
+                <li><input type="checkbox"> Prepare group session notes</li>
+                <li><input type="checkbox"> Follow-up with Sarah Johnson</li>
+            </ul>
+        </section>
+
+        <!-- Upcoming Group Therapy Sessions Section -->
+        <section class="group-sessions-overview">
+            <h2>Upcoming Group Sessions</h2>
+            <ul>
+                <li>Mindfulness Group - Sep 20, 2024, 2:00 PM</li>
+                <li>Anxiety Support Group - Sep 22, 2024, 3:30 PM</li>
+                <li>Stress Management - Sep 25, 2024, 5:00 PM</li>
+            </ul>
+        </section>
+
+        <!-- Notifications Section -->
+        <section class="notifications">
+            <h2>Notifications</h2>
+            <ul>
+                <li>3 new journal entries</li>
+                <li>John Doe updated his goals</li>
+                <li>Upcoming appointment with Wendy - Sep 17, 2024</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness App. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

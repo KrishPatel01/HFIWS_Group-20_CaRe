@@ -1,0 +1,125 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00308F; 
+    color: white;
+  }
+  
+  header .logo img {
+    height: 60px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Get Started Section */
+  .get-started {
+    background-color: #F04A46; 
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .get-started h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .get-started p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50; 
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    color: #00308F; 
+    border: 2px solid #00308F;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  .login-option {
+    margin-top: 30px;
+  }
+  
+  .login-option a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #00308F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  footer ul li a {
+    color: white;
+  }
+  

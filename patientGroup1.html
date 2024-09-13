@@ -7,9 +7,11 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="js/script1.js"></script>
+
 
 </head>
 <body>
@@ -18,8 +20,8 @@
             <img class="nav-logo" src="logo.png">
             <a href="#" class="nav-link">Home</a>
             <a href="patientView.html" class="nav-link">patients</a>
-            <a href="#" class="nav-link">Observation</a>
-            <a href="#" class="nav-link active">Groups</a>
+            <a href="notes.html" class="nav-link">Observation</a>
+            <a href="groups.html" class="nav-link active">Groups</a>
         </div>
         <div class="navbar-right">
             <div class="user-greeting">
@@ -54,13 +56,13 @@
             </div>
         </div>
         <div class="group-area">
-            <div id="group-name">Group Name</div>
+            <!-- <div id="group-name">Group Name</div> -->
+            <div id="group-name"><input class="group-name" type="text" placeholder="Enter Group Name.."></div>
             <ul id="group" class="group-list" ondrop="drop(event)" ondragover="allowDrop(event)">
             </ul>
             <button class="submit-btn">Submit</button>
         </div>
     </div>
 
-    <script src="script1.js"></script>
 </body>
 </html>

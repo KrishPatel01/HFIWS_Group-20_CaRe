@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00308F; /* Navy blue */
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layout for the Main Sections */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.dashboard-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00308F;
+}
+
+/* Hover Effect */
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove underline from links */
+.no-underline {
+    text-decoration: none; 
+    color: #00308F;  
+    font-weight: bold;  
+}
+
+.no-underline:hover {
+    text-decoration: underline;  
+    color: #4CAF50;  
+}
+
+
+/* New Sections for Patient Progress, Task Reminders, Group Sessions, etc. */
+.progress-overview, .task-reminders, .group-sessions-overview, .notifications {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00308F;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Task Reminders Checkbox */
+.task-reminders ul li {
+    display: flex;
+    align-items: center;
+}
+
+.task-reminders input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+    }
+}
+
+
+
+/* Upcoming Events Container */
+.upcoming-events {
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-events h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Scrollable Event List */
+.events-list {
+    max-height: 100px;  
+    overflow-y: auto;  
+    padding-right: 10px; 
+}
+
+/* List Styling */
+.events-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.events-list ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.events-list ul li a {
+    color: #00308F;
+    text-decoration: none;
+}
+
+.events-list ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #00308F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

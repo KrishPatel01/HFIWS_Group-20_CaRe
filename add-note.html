@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Note</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <!-- Navigation links for Home and Notes pages -->
+        <h1>
+            <a href="get_started.html" class="home-link">Home</a>
+            <a href="view-notes.html" class="notes-link">Notes</a>
+        </h1>
+        <div class="user-info">
+            Hi, Adam <img src="images/user-icon.png" alt="User Icon" class="user-icon">
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="form-container">
+            <form>
+            <div class="left-section">
+                <h2>Add Note for <span id="patient-name">John Warner</span></h2>
+            </div>
+              <div class="form-group">
+                <label for="date">Enter Date:</label>
+                <input type="text" id="date" placeholder="DD/MM/YYYY">
+              </div>
+              
+              <div class="form-group">
+                <label for="entry">Entry:</label>
+                <input type="text" id="entry" placeholder="Entry">
+              </div>
+              
+              <div class="form-group">
+                <label for="description">Enter your description here:</label>
+                <textarea id="description" placeholder="Enter your notes here..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="description">Add notes:</label>
+                <input type="file">
+              </div>
+
+              
+              <button type="submit">Save</button>
+            </form>
+          </div>
+          
+         <!-- <div class="content-container">
+             Left section: Add Note Form
+            <form id="new-note" method="get">
+            <div class="left-section">
+                <h2>Add Note for <span id="patient-name">John Warner</span></h2>
+                    <label for="date">Enter Date</label>
+                    <input type="text" id="date" placeholder="DD/MM/YYYY">
+                    <label for="entry">Entry</label>
+                    <input type="text" id="entry" placeholder="Entry">
+                    <label for="discription">Enter your discription here</label>
+                    <textarea id="notes" placeholder="Enter your notes here..."></textarea>
+                    <button type="button" onclick="saveNote()">Save</button>
+                </form>
+            </div>
+        </div> -->
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>

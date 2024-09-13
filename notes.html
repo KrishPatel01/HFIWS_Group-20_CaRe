@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <!-- Navigation links for Home and Notes pages -->
+        <h1>
+            <a href="index.html" class="home-link">Home</a>
+            <a href="view-notes.html" class="notes-link">Notes</a>
+        </h1>
+        <div class="user-info">
+            Hi, Adam <img src="images/user-icon.png" alt="User Icon" class="user-icon">
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="content-container">
+            <!-- Left section: Patients List -->
+            <div class="left-section">
+                <h2>Patients List</h2>
+                <div class="patient-list-container">
+                    <ul id="patient-list">
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('John Warner')">
+                                <img src="images/patient1.png" alt="John Warner"> John Warner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('Tracey')">
+                                <img src="images/patient2.png" alt="Tracey"> Tracey
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('John Locket')">
+                                <img src="images/patient3.png" alt="John Locket"> John Locket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('Bill Kelly')">
+                                <img src="images/patient6.png" alt="Bill Kelly"> Bill Kelly
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('Katy Sellen')">
+                                <img src="images/patient5.png" alt="Katy Sellen"> Katy Sellen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('Margaret')">
+                                <img src="images/patient4.png" alt="Margaret"> Margaret
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-notes.html" class="notes-link" onclick="selectPatient('Nancy')">
+                                <img src="images/patient7.png" alt="Nancy"> Nancy
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <!-- Right section: Search bar -->
+            <div class="right-section">
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Search" onkeyup="searchPatients()">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>

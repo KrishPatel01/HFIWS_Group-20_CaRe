@@ -155,8 +155,8 @@ h2 {
 }
 
 .group-head{
-    border-radius: 10px;
-    background-color: rgb(255, 118, 69);
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(251 187 164);
     padding: 5px;
     margin-bottom: 5px;
 }
@@ -167,4 +167,14 @@ h2 {
 
 .search-link{
 text-decoration: none;
+}
+
+#startActivity{
+    color: #ffffff;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: #5b67f0;
+    border: 0;
 }

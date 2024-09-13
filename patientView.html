@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapist Dashboard</title>
-    <link rel="stylesheet" href="patientView.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles/patientView.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <script defer src="https://kit.fontawesome.com/a076d05399.js"></script> 
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
-    <script defer src="patientView.js"></script>
+    <script defer src="js/patientView.js"></script>
     <div class="wrapper">
         
 
@@ -49,10 +49,13 @@
                     <div id="patient-info">
                         <p>Select a patient to view details.</p>
                     </div>
-                    <h3>Observation Notes</h3>
+                    <h3>Previous Observation Notes</h3>
                     <div id="observation-notes">
                         <p>No notes available.</p>
                     </div>
+                    <input type="checkbox" id="option3" name="option3" value="Option 3" style="margin-top: 10px;">
+        <label for="option3">Check it later</label><br><br>
+
                     <textarea id="new-note" class="observation-text" placeholder="quick add observation notes here..."></textarea>
                     <button class="notes-btn" onclick="addObservationNote()">Add Note</button>
                 </div>
