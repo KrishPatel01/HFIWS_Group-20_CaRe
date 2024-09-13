@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.highlight {
+    color: #3a3aee;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.patient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.patient-card {
+    padding: 10px;
+    border: 2px solid #3a3aee;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #fff;
+}
+
+.patient-card p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.patient-card span {
+    font-size: 0.9em;
+    color: grey;
+}
