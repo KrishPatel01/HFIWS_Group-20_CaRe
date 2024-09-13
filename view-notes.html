@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Notes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <!-- Navigation links for Home and Notes pages -->
+        <h1>
+            <a href="index.html" class="home-link">Home</a>
+            <a href="add-note.html" class="notes-link">Add Note</a>
+        </h1>
+        <div class="user-info">
+            Hi, Adam <img src="images/user-icon.png" alt="User Icon" class="user-icon">
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="content-container">
+            <!-- Left section: Patient Notes -->
+            <div class="left-section">
+                <h2>Notes for <span id="patient-name">John Warner</span></h2>
+                <div class="notes-container">
+                    <div class="note">
+                    <p>DD/MM/YYYY</p>
+                    <p>Entry 1: Description 1</p>
+                    </div>
+                    <div class="note">
+                    <p>DD/MM/YYYY</p>
+                    <p>Entry 2: Description 2</p>
+                    </div>
+                    <div class="note">
+                    <p>DD/MM/YYYY</p>
+                    <p>Entry 3: Description 3</p>
+                    </div>
+                    <!-- Additional notes can go here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>

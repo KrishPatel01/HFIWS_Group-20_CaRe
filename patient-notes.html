@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Notes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Notes</h1>
+        <a href="index.html" class="notes-link">Home</a>
+        <div class="user-info">Hi, Adam <img src="images/user-icon.png" alt="User Icon" class="user-icon"></div>
+    </div>
+    
+    <div class="content">
+        <h2 id="patient-name">John Warner</h2>
+        <button id="add-note-button" onclick="showAddNote()">Add Note</button>
+        <div id="notes">
+            <!-- Existing notes will be dynamically populated here -->
+            <p>Note 1: Description 1</p>
+            <p>Note 2: Description 2</p>
+            <!-- More notes -->
+        </div>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>
