@@ -16,7 +16,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="../logo.png" alt="CARE">
+            <img src="../img/logo.png" alt="CARE">
         </div>
         <ul class="nav-links">
             <li><a href="dashboard.php">Home</a></li>
