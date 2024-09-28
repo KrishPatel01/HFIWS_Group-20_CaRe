@@ -4,7 +4,7 @@ include('layouts/header.php');
 include('../common/config/database.php');
 
 // Fetch existing groups from the database
-$group_query = "SELECT g.id, g.group_name, COUNT(gp.patient_id) as total_members 
+$group_query = "SELECT g.id, g.group_name, COUNT(gp.patient_id) as total_members
                 FROM groups g
                 LEFT JOIN group_patients gp ON g.id = gp.group_id
                 GROUP BY g.id";
@@ -96,8 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </table>
 </div>
 
-<div class="container">
-    <form method="POST" action="">
+<form method="POST" action="">
+    <div class="container-group">
         <div class="patient-list">
             <div class="search-bar">
                 <input type="text" placeholder="Search Patient" id="searchInput" onkeyup="filterPatients()">
@@ -129,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <button type="submit" class="btn">Create</button>
         </div>
-    </form>
-</div>
+    </div>
+</form>
 
 <?php
 include('layouts/footer.php');
@@ -150,36 +150,58 @@ include('layouts/footer.php');
         var data = ev.dataTransfer.getData("text");
         var patientElement = document.getElementById(data);
 
-        // Append the dragged patient to the group list if not already there
-        if (!document.getElementById('group').contains(patientElement)) {
-            document.getElementById("group").appendChild(patientElement);
-
-            // Add the patient ID to the hidden input for group creation
-            var patientIdsInput = document.getElementById("patient_ids");
-            var patientId = data.replace('patient', ''); // Extract the ID number
-
-            // Update the hidden input field
-            var currentValue = patientIdsInput.value ? patientIdsInput.value.split(',') : [];
-
-            // Only add if it's not already in the list
-            if (!currentValue.includes(patientId)) {
-                currentValue.push(patientId);
-                patientIdsInput.value = currentValue.join(',');
-            }
+        // Append to group only if not already in the group list
+        if (!patientElement.closest('.group-area')) {
+            appendToGroup(patientElement);
         }
+        updatePatientIds();
     }
 
-    // Search filter for patient names
-    function filterPatients() {
-        var input, filter, patientList, items, i, txtValue;
-        input = document.getElementById('searchInput');
-        filter = input.value.toLowerCase();
-        patientList = document.getElementById("patientNames");
-        items = patientList.getElementsByClassName('patient-item');
+    function appendToGroup(element) {
+        // Create a new container div for the patient
+        var newElement = element.cloneNode(true); // Clone the node
+        newElement.className = 'group-patient-item'; // Adjust class name if necessary
 
-        for (i = 0; i < items.length; i++) {
-            txtValue = items[i].textContent || items[i].innerText;
-            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        // Add the remove button
+        var removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.className = 'btn remove-btn';
+        removeButton.onclick = function() {
+            removePatient(element.id);
+        };
+
+        newElement.appendChild(removeButton);
+        document.getElementById('group').appendChild(newElement);
+
+        // Remove the original element from the patient list
+        element.parentNode.removeChild(element);
+    }
+
+    function updatePatientIds() {
+        var groupList = document.getElementById("group").getElementsByClassName("group-patient-item");
+        var patientIds = Array.from(groupList).map(item => item.id.replace('patient', ''));
+        document.getElementById("patient_ids").value = patientIds.join(',');
+    }
+
+    function removePatient(patientId) {
+        var element = document.getElementById(patientId);
+        if (element) {
+            document.getElementById("patientNames").appendChild(element); // Move back to patient list
+            element.classList.replace('group-patient-item', 'patient-item'); // Adjust class for style
+            element.removeChild(element.querySelector('button')); // Remove the button
+        }
+        updatePatientIds();
+    }
+
+    function filterPatients() {
+        var input = document.getElementById('searchInput');
+        var filter = input.value.toUpperCase();
+        var patientList = document.getElementById("patientNames");
+        var items = patientList.getElementsByClassName('patient-item');
+
+        for (var i = 0; i < items.length; i++) {
+            var txtValue = items[i].textContent || items[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 items[i].style.display = "";
             } else {
                 items[i].style.display = "none";

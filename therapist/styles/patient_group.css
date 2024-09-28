@@ -10,12 +10,16 @@ body {
   padding: 20px;
 }
 
-.container {
-  display: flex; /* Ensures that children are laid out in a row */
-  flex-wrap: nowrap; /* Prevents the children from wrapping onto the next line */
-  justify-content: space-between; /* Spaces the children evenly, can be adjusted if needed */
+.container-group {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   margin-top: 30px;
-  height: calc(100vh - 60px); /* Adjusts the container's height to account for padding/margins */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .flex-container {
@@ -77,7 +81,7 @@ table td {
   min-height: 400px; /* Ensures the container doesn’t shrink too small */
   max-height: calc(100vh - 100px); /* Optional: Adjusts max height based on the viewport height minus any additional margins/paddings */
 }
-/* 
+/*
 .patient-list {
   max-height: 100%;
   overflow-y: auto;
@@ -180,6 +184,7 @@ input[type="text"]:focus {
 .group-patient-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;

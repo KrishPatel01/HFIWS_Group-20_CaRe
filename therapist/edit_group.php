@@ -5,7 +5,6 @@ include('../common/config/database.php');
 
 // Check if a group_id is provided
 $group_id = isset($_GET['group_id']) ? intval($_GET['group_id']) : 0;
-
 // Fetch group details
 $group_query = "SELECT group_name FROM groups WHERE id = $group_id";
 $group_result = mysqli_query($connection, $group_query);
@@ -54,43 +53,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!-- Flexbox Layout for the patient list and group area -->
-<div class="container">
-    <form method="POST" action="">
-        <div class="flex-container">
-            <!-- Patient List Section -->
-            <div class="patient-list">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search Patient" id="searchInput" onkeyup="filterPatients()">
-                </div>
-                <div class="group-name">
-                    <label for="group_name">Group Name:</label>
-                    <input type="text" name="group_name" id="group_name" value="<?= htmlspecialchars($group['group_name']) ?>" required>
-                </div>
-                <div id="patientNames" class="list">
-                    <?php while ($patient = mysqli_fetch_assoc($patient_result)): ?>
-                        <div class="patient-item" draggable="true" ondragstart="drag(event)" id="patient<?= $patient['id'] ?>">
-                            <?= htmlspecialchars($patient['name']) ?>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
+<form method="POST" action="">
+    <div class="container-group">
+        <div class="patient-list">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Patient" id="searchInput" onkeyup="filterPatients()">
             </div>
-
-            <!-- Group Area Section -->
-            <div class="group-area">
-                <ul id="group" class="group-list" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <?php while ($patient = mysqli_fetch_assoc($group_patient_result)): ?>
-                        <div class="group-patient-item" draggable="true" ondragstart="drag(event)" id="patient<?= $patient['id'] ?>">
-                            <?= htmlspecialchars($patient['name']) ?>
-                            <button type="button" class="btn remove-btn" onclick="removePatient('patient<?= $patient['id'] ?>')">Remove</button>
-                        </div>
-                    <?php endwhile; ?>
-                </ul>
-                <input type="hidden" name="patient_ids" id="patient_ids">
-                <button type="submit" class="btn">Update Group</button>
+            <div class="group-name">
+                <label for="group_name">Group Name:</label>
+                <input type="text" name="group_name" id="group_name" value="<?= htmlspecialchars($group['group_name']) ?>" required>
+            </div>
+            <div id="patientNames" class="list">
+                <?php while ($patient = mysqli_fetch_assoc($patient_result)): ?>
+                    <div class="patient-item" draggable="true" ondragstart="drag(event)" id="patient<?= $patient['id'] ?>">
+                        <?= htmlspecialchars($patient['name']) ?>
+                    </div>
+                <?php endwhile; ?>
             </div>
         </div>
-    </form>
-</div>
+
+        <div class="group-area">
+            <ul id="group" class="group-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <?php while ($patient = mysqli_fetch_assoc($group_patient_result)): ?>
+                    <div class="group-patient-item" draggable="true" ondragstart="drag(event)" id="patient<?= $patient['id'] ?>">
+                        <?= htmlspecialchars($patient['name']) ?>
+                        <button type="button" class="btn remove-btn" onclick="removePatient('patient<?= $patient['id'] ?>')">Remove</button>
+                    </div>
+                <?php endwhile; ?>
+            </ul>
+            <input type="hidden" name="patient_ids" id="patient_ids">
+            <button type="submit" class="btn">Update Group</button>
+        </div>
+    </div>
+</form>
 
 
 
