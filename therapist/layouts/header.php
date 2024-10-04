@@ -20,7 +20,7 @@
 		<ul class="nav-links">
 			<li><a href="dashboard.php">Home</a></li>
 			<li><a href="patient_group.php">Patient Groups</a></li>
-			<li><a href="../login.php">Logout</a></li>
+			<li><a href="../logout.php">Logout</a></li>
 		</ul>
 		<div class="hamburger">
 			<div class="line"></div>

@@ -1,13 +1,20 @@
 <?php
+session_start();
 $page_title = 'Therapist Dashboard';
 include('layouts/header.php');
+include('../common/config/database.php');
+
+if ($_SESSION['role'] != "therapist") {
+    header("Location: " . BASE_URL . "login.php");
+    exit();
+}
+
 ?>
 
 <head>
 	<link rel="stylesheet" href="../styles/dashboard_styles.css">
 </head>
 <?php
-include('../common/config/database.php');
 if (isset($_GET['type']) && $_GET['type'] == "update") {
 	$temp = $_GET['is_highlight'] == 1 ? 0 : 1;
 	$sql = "UPDATE patient SET is_highlight =" . $temp . " WHERE id = " . $_GET['id'];

@@ -4,8 +4,7 @@ $page_title = 'Profile';
 include('layouts/header.php');
 include('../common/config/database.php');
 
-
-if (!isset($_SESSION['user_id'])) {
+if ($_SESSION['role'] != "patient") {
     header("Location: " . BASE_URL . "login.php");
     exit();
 }

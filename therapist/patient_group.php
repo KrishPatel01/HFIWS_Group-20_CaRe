@@ -1,7 +1,13 @@
 <?php
+session_start();
 $page_title = 'Patient Group';
 include('layouts/header.php');
 include('../common/config/database.php');
+
+if ($_SESSION['role'] != "therapist") {
+    header("Location: " . BASE_URL . "login.php");
+    exit();
+}
 
 // Fetch existing groups from the database
 $group_query = "SELECT g.id, g.group_name, COUNT(gp.patient_id) as total_members

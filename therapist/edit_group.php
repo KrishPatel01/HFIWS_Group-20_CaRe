@@ -1,7 +1,13 @@
 <?php
+session_start();
 $page_title = 'Edit Patient Group';
 include('layouts/header.php');
 include('../common/config/database.php');
+
+if ($_SESSION['role'] != "therapist") {
+    header("Location: " . BASE_URL . "login.php");
+    exit();
+}
 
 // Check if a group_id is provided
 $group_id = isset($_GET['group_id']) ? intval($_GET['group_id']) : 0;

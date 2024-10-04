@@ -22,7 +22,7 @@
             <li><a href="dashboard.php">Home</a></li>
             <li><a href="view_goals.php">Goals</a></li>
             <li><a href="view_journal.php">Journal</a></li>
-            <li><a href="../login.php">Logout</a></li>
+            <li><a href="../logout.php">Logout</a></li>
         </ul>
         <div class="hamburger">
             <div class="line"></div>
