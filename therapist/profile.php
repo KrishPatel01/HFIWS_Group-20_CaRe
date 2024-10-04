@@ -2,15 +2,14 @@
 $page_title = 'Profile';
 include('layouts/header.php');
 
-if (isset($_GET['id'])) {
-    $patient_id = $_GET['id'];
-} else {
-
-    header("Location: dashboard.php");
-    exit;
-}
-
 include('../common/config/database.php');
+
+if ($_SESSION['role'] != "therapist") {
+    header("Location: " . BASE_URL . "login.php");
+    exit();
+}else{
+    $patient_id = $_GET['id'];
+}
 
 $sql = "SELECT name, email, dob, gender, height, weight, phone, address, emergency_phone_number FROM patient WHERE id = ?";
 $stmt = $connection->prepare($sql);

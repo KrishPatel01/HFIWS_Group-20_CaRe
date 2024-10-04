@@ -4,6 +4,11 @@ include('layouts/header.php');
 
 include('../common/config/database.php');
 
+if ($_SESSION['role'] != "therapist") {
+    header("Location: " . BASE_URL . "login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$title = $_POST['note_title'];
 	$observation = $_POST['observation'];

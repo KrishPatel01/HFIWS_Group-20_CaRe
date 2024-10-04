@@ -5,6 +5,11 @@ include('layouts/header.php');
 
 include('../common/config/database.php');
 
+if ($_SESSION['role'] != "therapist") {
+    header("Location: " . BASE_URL . "login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$p_id = $_GET['id'];
 	$id = $_SESSION['user_id'];
