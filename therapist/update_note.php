@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page_title = 'Edit Note';
 include('layouts/header.php');
 
