@@ -13,9 +13,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone_number'];
     $emergency_phone = $_POST['emergency_phone_number'];
     $address = $_POST['address'];
+    if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {
+        $allowed = ["jpg" => "image/jpeg", "png" => "image/png", "jpeg" => "image/jpeg", "gif" => "image/gif"];
+        $filename = $_FILES["profile_image"]["name"];
+        $filetype = $_FILES["profile_image"]["type"];
+        $filesize = $_FILES["profile_image"]["size"];
 
-    $query = "INSERT INTO patient (name, email, password, dob, age, height, weight, gender, phone, emergency_phone_number, address, role)
-              VALUES ('$name', '$email', '$password', '$dob','$age', '$height', '$weight', '$gender', '$phone', '$emergency_phone', '$address', 'patient')";
+        // Verify file extension
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        if (!array_key_exists($ext, $allowed)) die("Error: Please select a valid file format.");
+
+        // Verify file size (5MB maximum)
+        if ($filesize > 5 * 1024 * 1024) die("Error: File size is too large.");
+
+        // Check MIME type
+        if (in_array($filetype, $allowed)) {
+
+            $new_filename = uniqid() . "." . $ext;
+            $upload_dir = "images/";
+
+            if (!is_dir($upload_dir)) {
+                mkdir($upload_dir, 0755, true);
+            }
+
+            move_uploaded_file($_FILES["profile_image"]["tmp_name"], $upload_dir . $new_filename);
+
+            $profile_image = $upload_dir . $new_filename;
+        } else {
+            die("Error: There was a problem with your upload.");
+        }
+    } else {
+        $profile_image = null; // No file uploaded
+    }
+
+    // Insert data into the database
+    $query = "INSERT INTO patient (name, email, password, dob, age, height, weight, gender, phone, emergency_phone_number, address, role, profile_image)
+              VALUES ('$name', '$email', '$password', '$dob', '$age', '$height', '$weight', '$gender', '$phone', '$emergency_phone', '$address', 'patient', '$profile_image')";
 
     if (mysqli_query($connection, $query)) {
         header("Location: " . BASE_URL . "login.php");
@@ -35,9 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <form class="center" method="POST" action="">
+    <form class="center" method="POST" action="" enctype="multipart/form-data">
         <div>
-            <img class="logo" src="logo.png" alt="CARE">
+            <img class="logo" src="img/logo.png" alt="CARE">
             <h3> Sign Up </h3>
             <hr>
             <div class="col-2">
@@ -120,6 +153,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <textarea name="address" id="address" placeholder="Enter your address" required></textarea>
                     </div>
                 </div>
+                <div>
+                <label>Profile Picture</label>
+                <div class="input-group">
+                    <input type="file" name="profile_image" id="profile_image" accept="image/*" required>
+                </div>
+            </div>
             </div>
             <div>
                 <button type="submit" class="btn">Sign Up</button>
